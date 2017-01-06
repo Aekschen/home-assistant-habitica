@@ -22,7 +22,7 @@ This component will enable you to track the following attributes in Home Assista
 What you can do with it?
 ----------------------
 * You can react on status changes using Hass.
-* Your Hass instance could trigger changes using the REST component (not realted to this integration).
+* Your Hass instance could trigger changes using the REST component (not related to this integration) based on stats within the Home Automation.
 * You can plot your data for example using Grafana out of the box:
 
 <img src="https://github.com/Aekschen/home-assistant-habitica/raw/master/docs/grafana.png" height="400" alt="Hass">
