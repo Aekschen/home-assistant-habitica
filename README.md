@@ -2,11 +2,13 @@
 
 Home Assistant:
 Open-source home automation platform running on Python 3.
-http://home-assistant.io/
+
+Visit: http://home-assistant.io/
 
 Habitica:
 Habitica is a free habit building and productivity app that treats your real life like a game.
-https://habitica.com
+
+Visit: https://habitica.com
 
 This component will enable you to track the following attributes in Home Assistant:
 * Name
@@ -20,7 +22,7 @@ This component will enable you to track the following attributes in Home Assista
 * Mana
 * max Mana
 
-
+![Hass integration](https://github.com/Aekschen/home-assistant-habitica/raw/master/docs/hass.png)
 
 What you can do with it?
 ----------------------
@@ -28,6 +30,7 @@ What you can do with it?
 * Your Hass instance could trigger changes using the REST component (not realted to this integration).
 * You can plot your data for example using Grafana out of the box:
 
+![Hass integration](https://github.com/Aekschen/home-assistant-habitica/raw/master/docs/grafana.png)
 
 Installation
 -----------
@@ -49,4 +52,5 @@ You need your UserID and your API key which you can find on the Habitica.com web
   api_key: <your_api_key>
 ```
 
-Thats it! :)
+
+Thats it, have fun! :)
