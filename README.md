@@ -17,7 +17,7 @@ This component will enable you to track the following attributes in Home Assista
 * HP / max HP
 * Mana / max Mana
 
-<img src="https://github.com/Aekschen/home-assistant-habitica/raw/master/docs/hass.png" height="400" alt="Hass">
+  <img src="https://github.com/Aekschen/home-assistant-habitica/raw/master/docs/hass.png" height="400" alt="Hass">
 
 What you can do with it?
 ----------------------
@@ -25,7 +25,7 @@ What you can do with it?
 * Your Hass instance could trigger changes using the REST component (not realted to this integration).
 * You can plot your data for example using Grafana out of the box:
 
-<img src="https://github.com/Aekschen/home-assistant-habitica/raw/master/docs/grafana.png" height="400" alt="Hass">
+  <img src="https://github.com/Aekschen/home-assistant-habitica/raw/master/docs/grafana.png" height="400" alt="Hass">
 
 Installation
 -----------
