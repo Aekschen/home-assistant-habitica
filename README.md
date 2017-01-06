@@ -1,28 +1,23 @@
 # Home-Assistant Habitica Integration
 
-Home Assistant:
-Open-source home automation platform running on Python 3.
+Home Assistant: http://home-assistant.io/ (Open-source home automation platform running on Python 3)
 
-Visit: http://home-assistant.io/
+Habitica: https://habitica.com (Habitica is a free habit building and productivity app that treats your real life like a game)
 
-Habitica:
-Habitica is a free habit building and productivity app that treats your real life like a game.
-
-Visit: https://habitica.com
+Description
+-----------
 
 This component will enable you to track the following attributes in Home Assistant:
+
 * Name
 * Level
 * Class
 * Gold
-* EXP
-* Next Level EXP
-* HP
-* max HP
-* Mana
-* max Mana
+* EXP / Next Level EXP
+* HP / max HP
+* Mana / max Mana
 
-![Hass integration](https://github.com/Aekschen/home-assistant-habitica/raw/master/docs/hass.png)
+<img src="https://github.com/Aekschen/home-assistant-habitica/raw/master/docs/hass.png" height="400" alt="Hass">
 
 What you can do with it?
 ----------------------
@@ -30,7 +25,7 @@ What you can do with it?
 * Your Hass instance could trigger changes using the REST component (not realted to this integration).
 * You can plot your data for example using Grafana out of the box:
 
-![Hass integration](https://github.com/Aekschen/home-assistant-habitica/raw/master/docs/grafana.png)
+<img src="https://github.com/Aekschen/home-assistant-habitica/raw/master/docs/grafana.png" height="400" alt="Hass">
 
 Installation
 -----------
