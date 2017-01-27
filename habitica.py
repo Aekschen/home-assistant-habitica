@@ -33,10 +33,12 @@ OPTION_TYPES = {
 
 CONF_API_USER = "api_user"
 CONF_API_KEY = "api_key"
+CONF_NAME = "name"
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Required(CONF_API_USER): cv.string,
     vol.Required(CONF_API_KEY): cv.string,
+    vol.Required(CONF_NAME): cv.string,
 })
 
 
@@ -44,6 +46,7 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
     """Setup the RESTful sensor."""
     api_user = str( config.get(CONF_API_USER) )
     api_key = str( config.get(CONF_API_KEY) )
+    playername = str( config.get(CONF_NAME) )
     headers = {'x-api-key': api_key, 'x-api-user': api_user}
     resource = RESOURCE_URL
     method = 'GET'
@@ -58,25 +61,26 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
 
     playerStats = []
     for sensor in OPTION_TYPES:
-        playerStats.append(HabiticaSensor(rest, sensor))
+        playerStats.append(HabiticaSensor(rest, sensor, playername))
     add_devices(playerStats)
 
 
 class HabiticaSensor(Entity):
     """Implementation of a REST sensor."""
 
-    def __init__(self, rest, option_type):
+    def __init__(self, rest, option_type, playername):
         """Initialize the REST sensor."""
         self.rest = rest
         self.type = option_type # the option from the list
         self._name = OPTION_TYPES[option_type][0]
         self._unit_of_measurement = OPTION_TYPES[option_type][2]
+        self.sensorname = SENSOR_PREFIX + playername + '_'
         self.update()
 
     @property
     def name(self):
         """Return the name of the sensor."""
-        return SENSOR_PREFIX + self._name
+        return self.sensorname + self._name
 
     @property
     def state(self):
