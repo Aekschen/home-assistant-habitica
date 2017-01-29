@@ -117,19 +117,19 @@ class HabiticaSensor(Entity):
         if self.type == 'name':
             self._state = jsonDict["data"]["profile"]["name"]
         elif self.type == 'hp':
-            self._state = jsonDict["data"]["stats"]["hp"]
+            self._state = '{0:.0f}'.format(jsonDict["data"]["stats"]["hp"])
         elif self.type == 'maxHealth':
-            self._state = jsonDict["data"]["stats"]["maxHealth"]
+            self._state = '{0:.0f}'.format(jsonDict["data"]["stats"]["maxHealth"])
         elif self.type == 'mp':
-            self._state = jsonDict["data"]["stats"]["mp"]
+            self._state = '{0:.0f}'.format(jsonDict["data"]["stats"]["mp"])
         elif self.type == 'maxMP':
-            self._state = jsonDict["data"]["stats"]["maxMP"]
+            self._state = '{0:.0f}'.format(jsonDict["data"]["stats"]["maxMP"])
         elif self.type == 'exp':
-            self._state = jsonDict["data"]["stats"]["exp"]
+            self._state = '{0:.0f}'.format(jsonDict["data"]["stats"]["exp"])
         elif self.type == 'toNextLevel':
-            self._state = jsonDict["data"]["stats"]["toNextLevel"]
+            self._state = '{0:.0f}'.format(jsonDict["data"]["stats"]["toNextLevel"])
         elif self.type == 'lvl':
-            self._state = jsonDict["data"]["stats"]["lvl"]
+            self._state = '{0:.0f}'.format(jsonDict["data"]["stats"]["lvl"])
         elif self.type == 'gp':
             self._state = '{0:.0f}'.format(jsonDict["data"]["stats"]["gp"])
         elif self.type == 'class':
